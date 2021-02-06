@@ -1,27 +1,14 @@
-import React from 'react'
+import React from 'react';
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
+import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
-
-const Profile = () => {
-    return <div className='content'>
-    <div><img src='https://www.roscosmos.ru/media/files/identity/roscosmos-logo-main.png'/></div>
-    <div>Avatar + description</div>
-    <div>
-      My posts
-      <div>New Post</div>
-      <div>
+const Profile = (props) => {
+    return (
         <div>
-          Post 1
+            <ProfileInfo profile={props.profile} status={props.status} updateStatus={props.updateStatus}/>
+            <MyPostsContainer />
         </div>
-        <div>
-          Post 2
-        </div>
-      </div>
-    </div>
-
-    
-  </div>
-
-
+    )
 }
 
 export default Profile;
